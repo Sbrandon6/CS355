@@ -1,0 +1,85 @@
+/* Place your CSS styles in this file */
+
+h1 {
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+}
+
+ /* CSS styles for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: whitesmoke;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Additional content */
+.additional-info, .additional-info2, .additional-info3, .additional-info4 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position to the right of the dropdown */
+  background-color: white;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show additional info on specific hover */
+.dropdown-content a:hover + .additional-info {
+  display: block;
+}
+
+.dropdown-content a:hover + .additional-info2 {
+  display: block;
+}
+
+.dropdown-content a:hover + .additional-info3 {
+  display: block;
+}
+
+.dropdown-content a:hover + .additional-info4 {
+  display: block;
+}
+
+
+
+/* Styling for the browser information */
+.browser-info {
+  font-size: 14px;
+  margin-top: 10px;
+}
