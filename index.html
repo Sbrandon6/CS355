@@ -1,0 +1,205 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Blank template</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+
+        <h1>CSCI 355 Summer Session 2024</h1>
+        
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        
+    </body>
+
+    <div class="dropdown">
+  <button class="dropbtn">Course</button>
+  <div class="dropdown-content">
+    <a href="https://gaia.cs.umass.edu/kurose_ross/eighth.php">Kurose and Ross Book</a>
+    <a href="https://www.w3schools.com/">w3schools Link</a>
+    <a href="https://www.geeksforgeeks.org/">geeksforgeeks Link</a>
+  </div>
+</div>
+
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Browser</button>
+  <div class="dropdown-content">
+    <a href="#">Navigator</a>
+    <div class="additional-info" id="browser-info">
+      <p id="info1"></p>
+      <p id="info2"></p>
+      <p id="info3"></p>
+      <p id="info4"></p>
+      <p id="info5"></p>
+      <p id="info6"></p>
+    </div>
+     <a href="#">Window</a>
+     <div class="additional-info2" id="browser-info">
+        <p id="info7"></p>
+     </div>
+     <a href="#">Screen</a>
+     <div class="additional-info3" id="browser-info">
+        <p id="info8"></p>
+        <p id="info9"></p>
+        <p id="info10"></p>
+        <p id="info11"></p>
+        <p id="info12"></p>
+        <p id="info13"></p>
+    </div>
+    <a href="#">Location</a>
+     <div class="additional-info4" id="browser-info">
+      <p id="info14"></p>
+      <p id="info15"></p>
+      <p id="info16"></p>
+      <p id="info17"></p>
+    </div>
+    <a href="#" onclick="getLocation()">GeoLocation</a>
+    <div class="additional-info5" id="browser-info">
+      <p id="info18"></p>
+    </div>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">About</button>
+  <div class="dropdown-content">
+    <a href="#">Description: 
+      Name: Brandon Sanichar
+      Age: 20
+      School: Queens College
+    </a>
+     <h2>Send e-mail to brandon.sanichar18@qmail.cuny.edu</h2>
+    <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+      Name:<br>
+      <input type="text" name="name"><br>
+      E-mail:<br>
+      <input type="text" name="mail"><br>
+      Comment:<br>
+      <input type="text" name="comment" size="50"><br><br>
+      <input type="submit" value="Send">
+      <input type="reset" value="Reset">
+    </form>
+   
+   </div>
+
+<script>
+  // JavaScript to display browser information
+  document.getElementById("info1").innerHTML =
+    "AppName: " + navigator.appName;
+</script>
+
+<script>
+document.getElementById("info2").innerHTML =
+"Product: " + navigator.product;
+</script>
+
+<script>
+document.getElementById("info3").innerHTML = 
+"AppVersion: " + navigator.appVersion;
+</script>
+
+<script>
+document.getElementById("info4").innerHTML = 
+"UserAgent: " + navigator.userAgent;
+</script>
+
+<script>
+document.getElementById("info5").innerHTML = 
+"Platform: " + navigator.platform;
+</script>
+
+<script>
+document.getElementById("info6").innerHTML = 
+"Language: " + navigator.language;
+</script>
+
+<script>
+document.getElementById("info7").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px";
+</script>
+
+<script>
+document.getElementById("info8").innerHTML = 
+"Screen width: " + screen.width;
+</script>
+
+<script>
+document.getElementById("info9").innerHTML = 
+"Screen height is " + screen.height;
+</script>
+
+<script>
+document.getElementById("info10").innerHTML = 
+"Available screen width: " + screen.availWidth;
+</script>
+
+<script>
+document.getElementById("info11").innerHTML = 
+"Available screen height: " + screen.availHeight;
+</script>
+
+<script>
+document.getElementById("info12").innerHTML = 
+"Screen color depth: " + screen.colorDepth;
+</script>
+
+<script>
+document.getElementById("info13").innerHTML = 
+"Screen pixel depth: " + screen.pixelDepth;
+</script>
+
+<script>
+document.getElementById("info14").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+</script>
+
+<script>
+document.getElementById("info15").innerHTML = 
+"Page hostname is: " + window.location.hostname;
+</script>
+
+<script>
+document.getElementById("info16").innerHTML =
+"Page path is: " + window.location.pathname;
+</script>
+
+<script>
+document.getElementById("info17").innerHTML =
+"The page protocol is: " + window.location.protocol;
+</script>
+
+<script>
+const info = document.getElementById("info18");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    info.innerHTML = "Geolocation is not supported by this browser.";
+    document.getElementById("browser-info").style.display = "block"; // Show additional info
+  }
+}
+
+function showPosition(position) {
+  info.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+  document.getElementById("browser-info").style.display = "block"; // Show additional info
+}
+</script>
+
+</body>
+</html>
+
+</html>
